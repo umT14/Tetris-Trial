@@ -66,13 +66,17 @@ public class GamePanel extends JPanel {
         return tm.getMatrix();
     }
 
+    public void deleteRow() {
+        tm.deleteFullRow();
+    }
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
         tm.paintTiles(g2);
-        tm.deleteFullRow();
+        //tm.deleteFullRow();
 
         Rectangle[] arr = currentBlock.getRecs();
         for (int i = 0; i < 4; i++) {
@@ -86,3 +90,4 @@ public class GamePanel extends JPanel {
 
     }
 }
+
