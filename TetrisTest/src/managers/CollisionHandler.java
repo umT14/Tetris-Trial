@@ -51,6 +51,7 @@ public class CollisionHandler {
                     }
 
                 }
+                panel.deleteRow();
                 curBlock = panel.getCurrentBlock();
                 rectangles = curBlock.getRecs();
                 getMostRectangle();
@@ -122,3 +123,4 @@ public class CollisionHandler {
     }
 
 }
+
